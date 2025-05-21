@@ -19,7 +19,7 @@ body {
   margin: 20px 0;
 }
 
-input {
+input, textarea {
   padding: 10px;
   margin: 10px;
   width: 80%;
@@ -45,14 +45,6 @@ button:hover {
   margin-top: 20px;
 }
 
-textarea {
-  width: 80%;
-  height: 80px;
-  margin-top: 10px;
-  border-radius: 5px;
-  padding: 10px;
-}
-
 .hidden {
   display: none;
 }
@@ -61,6 +53,7 @@ textarea {
   margin-top: 10px;
   font-weight: bold;
 }
+
 #score {
   font-size: 18px;
   margin-top: 10px;
@@ -79,4 +72,3 @@ textarea {
   border-radius: 5px;
   font-weight: bold;
 }
-

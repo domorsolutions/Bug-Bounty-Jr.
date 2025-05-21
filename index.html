@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bug Bounty Junior - Level 1</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔍 Bug Bounty Junior: Level 1</h1>
+    <p>Detective, something's wrong with this login page. Can you find the bug?</p>
+    
+    <div class="login-box">
+      <input type="text" placeholder="Username" id="username">
+      <input type="password" placeholder="Password" id="password">
+      <button id="login-btn">Login</button>
+    </div>
+
+    <button id="report-btn">📢 Report a Bug</button>
+    <div id="report-panel" class="hidden">
+      <textarea id="bug-report" placeholder="Describe the bug..."></textarea>
+      <button onclick="submitReport()">Submit Report</button>
+      <div id="feedback"></div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

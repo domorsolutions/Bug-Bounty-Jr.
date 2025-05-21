@@ -9,12 +9,15 @@
   <div class="container">
     <h1>🔍 Bug Bounty Junior: Level 1</h1>
     <p>Detective, something's wrong with this login page. Can you find the bug?</p>
-    
+
     <div class="login-box">
       <input type="text" placeholder="Username" id="username">
       <input type="password" placeholder="Password" id="password">
       <button id="login-btn">Login</button>
     </div>
+
+    <div id="score">Score: 0</div>
+    <div id="badges"><strong>Badges:</strong></div>
 
     <button id="report-btn">📢 Report a Bug</button>
     <div id="report-panel" class="hidden">
@@ -25,9 +28,5 @@
   </div>
 
   <script src="game.js"></script>
-
-  <div id="score">Score: 0</div>
-<div id="badges"><strong>Badges:</strong></div>
-
 </body>
 </html>

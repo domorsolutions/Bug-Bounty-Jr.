@@ -12,6 +12,10 @@ function checkForBadges() {
     badges.push("Bug Spotter");
     displayBadge("Bug Spotter");
   }
+  if (score >= 20 && !badges.includes("Bug Hunter")) {
+    badges.push("Bug Hunter");
+    displayBadge("Bug Hunter");
+  }
 }
 
 function displayBadge(badgeName) {
@@ -46,7 +50,7 @@ function submitReport() {
     feedback.style.color = "green";
     updateScore(10);
 
-    // Show NEXT LEVEL button
+    // Create and append "Next Level" button
     const nextBtn = document.createElement("button");
     nextBtn.textContent = "▶️ Go to Level 2";
     nextBtn.onclick = () => window.location.href = "level2.html";
@@ -59,7 +63,10 @@ function submitReport() {
 }
 
 window.onload = () => {
-  document.getElementById("report-btn").addEventListener("click", () => {
-    document.getElementById("report-panel").classList.toggle("hidden");
-  });
+  const reportButton = document.getElementById("report-btn");
+  if (reportButton) {
+    reportButton.addEventListener("click", () => {
+      document.getElementById("report-panel").classList.toggle("hidden");
+    });
+  }
 };

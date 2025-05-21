@@ -9,13 +9,16 @@
   <div class="container">
     <h1>🔍 Bug Bounty Junior: Level 2</h1>
     <p>Detective, this comment box seems suspicious. Can you find the bug?</p>
-    
+
     <div class="comment-box">
       <input type="text" id="comment-input" placeholder="Enter your comment">
       <button onclick="submitComment()">Submit</button>
     </div>
 
     <div id="comments"></div>
+
+    <div id="score">Score: 0</div>
+    <div id="badges"><strong>Badges:</strong></div>
 
     <button id="report-btn">📢 Report a Bug</button>
     <div id="report-panel" class="hidden">
@@ -25,16 +28,15 @@
     </div>
   </div>
 
+  <script src="game.js"></script>
   <script>
     function submitComment() {
       const input = document.getElementById("comment-input").value;
       const commentsDiv = document.getElementById("comments");
       const comment = document.createElement("div");
-      comment.innerHTML = input; // Intentionally vulnerable to XSS
+      comment.innerHTML = input; // Unsafe rendering (XSS)
       commentsDiv.appendChild(comment);
     }
-
-    // Reuse submitReport and other functions from game.js
-  <script src="game.js"></script>
+  </script>
 </body>
 </html>
